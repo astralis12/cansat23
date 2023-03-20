@@ -213,11 +213,10 @@ void setup(){
   ref = bmp.pressure/100;
   Serial.println("mengontol");
 
-  threads.addThread(sensor,1);
-  threads.addThread(parsing,1);
-  threads.addThread(sim,1);
-  threads.addThread(eeprom,1);
-  threads.addThread(print,1);
+  threads.addThread(sensor);
+  threads.addThread(print);
+  threads.addThread(eeprom);
+  threads.addThread(sim);
 
 }
 
